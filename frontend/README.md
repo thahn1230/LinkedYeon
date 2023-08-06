@@ -1,2 +1,2 @@
 This is frontend directory
-Hi Hanna is here
+i'm go0jae

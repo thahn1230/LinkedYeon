@@ -1,2 +1,2 @@
 This is frontend directory
-HI
+i'm go0jae

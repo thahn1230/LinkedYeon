@@ -1,0 +1,20 @@
+/* FindIdPwPage.css */
+.find-id-pw-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;  /* 둥근 모서리를 조금 더 크게 */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);  /* 그림자를 조금 더 부드럽게 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;  /* 마우스 호버 시 애니메이션 효과 추가 */
+
+  /* 배경색과 그레디언트 효과 추가 */
+  background: linear-gradient(45deg, #f3f3f3, #ffffff);
+}
+
+/* 마우스가 올라갔을 때의 효과 (호버 효과) */
+.find-id-pw-container:hover {
+  transform: translateY(-10px);  /* 조금 위로 움직임 */
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.2);  /* 그림자가 조금 더 진해짐 */
+}

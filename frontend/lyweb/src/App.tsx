@@ -5,6 +5,10 @@ import { AuthProvider } from './function/AuthContext';  // 로그인 상태 관�
 import Header from './components/Header';
 import MainPage from './views/MainPage';
 import LoginPage from './views/LoginPage';
+import SignupPage from './views/SignupPage';
+import FindIdPwPage from './views/FindIdPwPage';
+import MyPage from './views/MyPage';
+
 import Footer from './components/Footer';  // Footer 컴포넌트도 import 해주세요.
 
 const App: React.FC = () => {
@@ -15,6 +19,9 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/Signup" element={<SignupPage />} />
+        <Route path="/FindIdPw" element={<FindIdPwPage />} />
+        <Route path="/mypage" element={<MyPage />} />
       </Routes>
       <Footer />       {/* 하단바 */}
     </Router>

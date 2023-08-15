@@ -67,6 +67,12 @@ const LoginPage: React.FC = () => {
       <button onClick={handleLogin} className="login-button">
         로그인
       </button>
+      <button onClick={() => navigate('/Signup')} className="signup-button">
+        회원가입
+      </button>
+      <button onClick={() => navigate('/FindIdPw')} className="find-id-pw-button">
+        ID/PW 찾기
+      </button>
     </div>
   );
 }

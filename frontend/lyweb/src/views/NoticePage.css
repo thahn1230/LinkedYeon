@@ -1,0 +1,27 @@
+/* views/NoticePage.css */
+.notice-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .notice-header {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .notice-search {
+    margin-right: 10px;
+  }
+
+  .notice-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .post {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }

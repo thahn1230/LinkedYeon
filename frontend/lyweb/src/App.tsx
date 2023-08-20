@@ -8,7 +8,7 @@ import LoginPage from './views/LoginPage';
 import SignupPage from './views/SignupPage';
 import FindIdPwPage from './views/FindIdPwPage';
 import MyPage from './views/MyPage';
-
+import NoticePage from './views/NoticePage';
 import Footer from './components/Footer';  // Footer 컴포넌트도 import 해주세요.
 
 const App: React.FC = () => {
@@ -22,6 +22,7 @@ const App: React.FC = () => {
         <Route path="/Signup" element={<SignupPage />} />
         <Route path="/FindIdPw" element={<FindIdPwPage />} />
         <Route path="/mypage" element={<MyPage />} />
+        <Route path="/notice" element={<NoticePage />} />
       </Routes>
       <Footer />       {/* 하단바 */}
     </Router>

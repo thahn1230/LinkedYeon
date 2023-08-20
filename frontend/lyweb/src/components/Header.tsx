@@ -7,7 +7,7 @@ import { useAuth } from '../function/AuthContext'; // useAuth를 임포트합니
 
 const Header: React.FC = () => {
     const navigate = useNavigate();
-    const { isLoggedIn, logout } = useAuth();
+    const { isLoggedIn, logout } = useAuth();   // 로그아웃 상태로 변경 
     //const [isLoggedIn, setIsLoggedIn] = useState(false); // 로그인 상태 변수 추가
     
   

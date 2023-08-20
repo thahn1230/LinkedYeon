@@ -12,40 +12,20 @@ const LoginPage: React.FC = () => {
 
   const { login } = useAuth();
 
-  const handleLogin = async () => {
-
-    const hardcodedUsername = "admin";
-    const hardcodedPassword = "password123";
-    
-    if (username === hardcodedUsername && password === hardcodedPassword) {
-      login();
-      setTimeout(() => { // 로그인 성공 후 일정 시간 후 메인 페이지로 리다이렉트
-        navigate('/');
-      }, 2000); // 2초 후 이동
-      alert("로그인이 성공했습니다.");
-       
-    } else {
-      if(username !== hardcodedUsername){
-        alert("아이디가 올바르지 않습니다. 다시 확인해주세요.");
-      }else {
-        alert("비밀번호가 틀렸습니다. 다시 확인해주세요.");
-      }
-      
-    }
-
-    /* 백엔드 로직 적용 예정 
+  const handleLogin = async (username: string, password: string) => {
     try {
-      const data = await loginUser(username, password);
-      if (data.success) {
-        // 로그인 성공 처리
-      } else {
-        // 로그인 실패 처리
-      }
+       const result = await login(username, password);
+       if (result.success) {
+          navigate('/');
+       } else {
+          alert(result.message || "로그인 실패");
+       }
     } catch (error) {
-      console.error("로그인 중 에러 발생:", error);
+       console.error("로그인 중 에러 발생:", "에러 발생!!");
     }
-    */
-  };
+ }
+ 
+
 
   return (
     <div className="login-container">
@@ -64,8 +44,8 @@ const LoginPage: React.FC = () => {
         onChange={(e) => setPassword(e.target.value)}
         className="login-input"
       />
-      <button onClick={handleLogin} className="login-button">
-        로그인
+      <button onClick={() => handleLogin(username, password)} className="login-button">
+    로그인
       </button>
       <button onClick={() => navigate('/Signup')} className="signup-button">
         회원가입

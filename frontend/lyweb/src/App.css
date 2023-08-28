@@ -1,3 +1,22 @@
+.selected {
+  background-color: #FFA500; /* 주황색 */
+  color: white;
+}
+
+.button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: #eee;
+}
+
+
+
 .App {
   text-align: center;
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { UserData } from '../types';
+import './GenderSelectComponent.css';
 
 
 /*

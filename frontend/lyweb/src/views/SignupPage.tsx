@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { UserData } from './types';
+import './SignupPage.css';
 import AnimalSelectComponent from './SignupDetail/AnimalSelectComponent';
 import GenderSelectComponent from './SignupDetail/GenderSelectComponent';
 import LocationSelectComponent from './SignupDetail/LocationSelectComponent';
@@ -43,8 +44,10 @@ const SignupPage: React.FC = () => {
             {page === 6 && <ReligionComponent userData={userData} setUserData={setUserData} />}
             {page === 7 && <DrinkingPreferenceComponent userData={userData} setUserData={setUserData} />}
             
+            <div className="nav-buttons">  
             <button onClick={handlePrevPage}>이전</button>
             <button onClick={handleNextPage}>다음</button>
+            </div>
         </div>
     );
 };

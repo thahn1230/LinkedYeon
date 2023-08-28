@@ -1,43 +1,48 @@
-/* SignupPage.css */
-
-.signup-container {
+div {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  max-width: 400px;
-  margin: 50px auto;
+  align-items: center;
   padding: 20px;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.signup-container input,
-.signup-container select {
-  margin-bottom: 15px;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #d1d1d1;
-  outline: none;
+body {
+  overflow-y: auto;
+}
+
+button {
+  padding: 10px 20px;
   font-size: 16px;
-}
-
-.signup-container button {
-  padding: 10px 15px;
-  background-color: #4CAF50;
-  color: #ffffff;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: background-color 0.3s;
+  margin: 5px; /* 버튼 주위의 간격을 조절합니다. */
 }
 
-.signup-container button:hover {
-  background-color: #45a049;
+button:hover {
+  background-color: #e0e0e0;
 }
 
-.pagination-buttons {
+/* 주황색의 텍스트 색상 변경 */
+.highlighted {
+  color: #FF7F00;
+}
+
+/* 이전, 다음 버튼의 스타일링 */
+button.nav-btn {
+  margin-top: 20px;
+  background-color: #FF7F00;
+  color: white;
+}
+
+button.nav-btn:hover {
+  background-color: #e06a00;
+}
+
+/* 이전, 다음 버튼의 배치를 위한 스타일링 */
+.nav-buttons {
+  flex-direction: row;
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  width: 80%; /* 원하는 너비에 따라 조절하세요. */
 }

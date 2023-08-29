@@ -8,7 +8,7 @@ import LoginPage from './views/LoginPage';
 import SignupPage from './views/SignupPage';
 import FindIdPwPage from './views/FindIdPwPage';
 import MyPage from './views/MyPage';
-import NoticePage from './views/NoticePage';
+import NoticePage from './views/Notice/NoticePage';
 import Footer from './components/Footer';
 import PrivateRoute from './function/PrivateRoute';  // PrivateRoute의 경로를 제대로 입력해주세요.
 

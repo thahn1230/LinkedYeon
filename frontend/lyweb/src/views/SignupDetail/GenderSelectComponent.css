@@ -1,0 +1,56 @@
+/* GenderSelectComponent.css */
+
+h2 {
+    margin-bottom: 20px;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 10px; /* 버튼 사이의 간격을 조절합니다. */
+}
+
+button:last-child {
+    margin-right: 0; /* 마지막 버튼의 margin-right를 제거합니다. */
+}
+
+button:hover {
+    background-color: #e0e0e0;
+}
+
+/* 선택된 성별을 주황색으로 표시 */
+button.selected {
+    background-color: #FF7F00;
+    color: white;
+}
+
+input[type="text"], input[type="range"] {
+    margin: 10px 0;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="range"] {
+    width: 80%; /* 슬라이더의 길이 조절 */
+}
+
+h3 {
+    margin-top: 20px;
+}
+
+/* 선택된 성별의 텍스트 색상 변경 */
+.highlighted {
+    color: #FF7F00;
+}

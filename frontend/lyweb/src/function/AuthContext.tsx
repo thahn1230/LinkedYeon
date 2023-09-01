@@ -1,6 +1,6 @@
 // 로그인 관련 함수 로그인 상태 정의 및 로그인, 로그아웃 함수 정의 (JWT 토큰 사용)
 import React, { useState, createContext, useContext } from 'react';
-import { loginUser } from './api';
+import { loginUser, logoutUser } from './api';
 
 // 로그인 상태와 관련된 타입 정의
 type AuthContextType = {
@@ -22,7 +22,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
         try {
             const data = await loginUser(username, password); // API 호출
             if (data.success && data.token) {
-                localStorage.setItem('token', data.token);
+                //localStorage.setItem('token', data.token); 로컬에 저장 로직 제거 
                 setIsLoggedIn(true);
                 return { success: true }; // 로그인 성공
             } else {
@@ -34,10 +34,15 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
         }
     };
 
-    const logout = () => {
-        localStorage.removeItem('token');
-        setIsLoggedIn(false);
+    const logout = async () => {
+        try {
+            await logoutUser(); // 로그아웃 API 호출
+            setIsLoggedIn(false);
+        } catch (error) {
+            console.error("로그아웃 중 에러 발생:", "에러 발생");
+        }
     };
+    
 
     return (
         <AuthContext.Provider value={{ isLoggedIn, login, logout }}>

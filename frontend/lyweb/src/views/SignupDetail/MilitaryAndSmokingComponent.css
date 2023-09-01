@@ -1,0 +1,51 @@
+
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.statusSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 중앙 정렬 */
+    justify-content: flex-start;
+    margin: 20px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.body-type-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 10px;   
+    width: 150px;
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+.button:hover {
+    background-color: #e0e0e0;
+}
+
+.button.selected {
+    background-color: #FF7F00;
+    color: white;
+}
+
+.feedback {
+    margin-top: 10px;
+}
+
+.highlighted {
+    color: #FF7F00;
+}

@@ -65,6 +65,7 @@ interface SignupData {
   drinking: string;
   hobby: string;
 
+  /*
   //이상형 정보 
   //ideal_nickname: string;  필요없음 
   ideal_height: string;
@@ -90,6 +91,7 @@ interface SignupData {
   Q_NINE: string;
   Q_TEN: string;
   // ... 나머지 답변도 타입 정의
+  */
 }
 
 export const signupAPI = async (data: SignupData) => {
@@ -111,6 +113,10 @@ export const signupAPI = async (data: SignupData) => {
   }
 
 }
+
+
+
+
 
 
 

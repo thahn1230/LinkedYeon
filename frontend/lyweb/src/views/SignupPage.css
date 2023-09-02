@@ -1,6 +1,6 @@
 div {
   display: flex;
-  flex-direction: column;
+  flex-direction: column;     /* 세로 배치*/
   align-items: center;
   padding: 20px;
 }
@@ -41,7 +41,7 @@ button.nav-btn:hover {
 
 /* 이전, 다음 버튼의 배치를 위한 스타일링 */
 .nav-buttons {
-  flex-direction: row;
+  flex-direction: row;    /* 가로배치 */
   display: flex;
   justify-content: space-between;
   width: 80%; /* 원하는 너비에 따라 조절하세요. */

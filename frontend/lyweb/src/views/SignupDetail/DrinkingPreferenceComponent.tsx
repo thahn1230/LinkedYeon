@@ -49,7 +49,7 @@ const DrinkingPreferenceComponent: React.FC<Props> = ({ userData, setUserData })
       </div>
 
       <p className="feedback">
-      나는 {userData.drinkingPreference ? <span className="highlighted">{userData.drinkingPreference}</span> : null}마셔 
+      나는 {userData.drinkingPreference ? <span className="highlighted">{userData.drinkingPreference}</span> : null} 마셔 
       </p>
 
     </div>

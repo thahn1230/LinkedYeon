@@ -1,0 +1,17 @@
+.fundamental-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;    
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="range"] {
+    margin: 10px 0;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}

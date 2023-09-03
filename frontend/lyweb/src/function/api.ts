@@ -14,7 +14,7 @@ export const loginUser = async (username: string, password: string) => {
     credentials: 'include' // 쿠키를 포함하여 요청을 전송
   });
 
-  if (!response.ok) {
+  if (!response.ok) { // 200번대인지 확인
     const message = await response.text();
     throw new Error(message);
   }
@@ -128,18 +128,9 @@ export const checkIDDuplicate = async (userID: string) => {
 
   const data = await response.json();
   return data.isDuplicate; // 예시: isDuplicate가 true면 중복, false면 중복 아님
-};
+};  
 
-  
-
-
-
-
-
-
-
-
-  export const getUserInfo = async (token: string) => {
+export const getUserInfo = async (token: string) => {
     const response = await fetch('YOUR_BACKEND_URL/user_info', {
       method: 'GET',
       headers: {
@@ -149,5 +140,5 @@ export const checkIDDuplicate = async (userID: string) => {
     });
   
     return response.json();
-  };
+};
   

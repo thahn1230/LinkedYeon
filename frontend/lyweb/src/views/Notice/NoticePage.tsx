@@ -45,8 +45,8 @@ const NoticePage: React.FC = () => {
       <div>
         <ul className='notice-list'>
           {posts.map((post) => (
-            <li key={post.id} className='post'>
-                <Link to={`/notice/${post.id}`}>{post.title}</Link>
+            <li key={post.post_no} className='post'>
+                <Link to={`/notice/${post.post_no}`}>{post.title}</Link>
             </li>
           ))}
         </ul>

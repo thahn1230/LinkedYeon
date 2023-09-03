@@ -52,7 +52,7 @@ const MilitaryAndSmokingComponent: React.FC<Props> = ({ userData, setUserData })
                 >
                     흡연자
                 </button>
-                <p className="feedback">{userData.smokingStatus && <span className="highlighted">{userData.smokingStatus}</span>}이야</p>
+                <p className="feedback">{userData.smokingStatus && <span className="highlighted">{userData.smokingStatus}</span>}야</p>
             </div>
         </div>
     );

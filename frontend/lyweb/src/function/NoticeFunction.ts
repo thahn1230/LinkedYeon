@@ -1,7 +1,7 @@
 /* 게시물 페이지에 필요한 함수*/
 
 export interface Post {
-    id: number;
+    post_no: number;
     title: string;
     hit: number;
     date: Date;
@@ -15,16 +15,18 @@ export const getPosts = async():Promise<Post[]> => {
         method: 'GET',
         headers: {
             'Content-Type' : 'application/json'
-        }
+        },
+        //body: JSON.stringify(postNo)
     });
     if (!response.ok){
-        console.error('Failed to fetch post');
-        return [];
+        const message = await response.text();
+        throw new Error(message);
     }
 
     const data = await response.json();
     return data as Post[];
 }
+
 
 export const createPost = async(postData: Partial<Post>) => {
     const response = await fetch('YOUR_BACKEND_URL/posts',{
@@ -35,7 +37,8 @@ export const createPost = async(postData: Partial<Post>) => {
         body: JSON.stringify(postData),
     });
     if (!response.ok){
-        console.error('Failed to CREATE post with post ID ${postID}');
+        const message = await response.text();
+        throw new Error(message);
     }
 }
 
@@ -49,7 +52,8 @@ export const updatePost = async(postId: number, postData: Partial<Post>) => {
     });
 
     if (!response.ok){
-        console.error('Failed to UPDATE post with post ID ${postID}');
+        const message = await response.text();
+        throw new Error(message);
     }
 }
 
@@ -59,6 +63,7 @@ export const deletePost = async(postId: number) => {
     });
 
     if (!response.ok){
-        console.error('Failed to DELTE post with post ID ${postID}');
+        const message = await response.text();
+        throw new Error(message);
     }
 }

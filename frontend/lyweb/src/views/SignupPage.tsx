@@ -8,6 +8,7 @@ import BodyTypeComponent from './SignupDetail/BodyTypeComponent';
 import MilitaryAndSmokingComponent from './SignupDetail/MilitaryAndSmokingComponent';
 import ReligionComponent from './SignupDetail/ReligionComponent';
 import DrinkingPreferenceComponent from './SignupDetail/DrinkingPreferenceComponent';
+import FundamentalComponent from './SignupDetail/FundamentalComponent';
 
 
 /*
@@ -43,6 +44,7 @@ const SignupPage: React.FC = () => {
             {page === 5 && <MilitaryAndSmokingComponent userData={userData} setUserData={setUserData} />}
             {page === 6 && <ReligionComponent userData={userData} setUserData={setUserData} />}
             {page === 7 && <DrinkingPreferenceComponent userData={userData} setUserData={setUserData} />}
+            {page === 8 && <FundamentalComponent userData={userData} setUserData={setUserData} />}
             
             <div className="nav-buttons">  
             <button onClick={handlePrevPage}>이전</button>

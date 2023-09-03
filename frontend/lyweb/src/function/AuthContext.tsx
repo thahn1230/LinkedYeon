@@ -16,7 +16,7 @@ type AuthProviderProps = {
 };
 
 export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
-    const [isLoggedIn, setIsLoggedIn] = useState<boolean>(!!localStorage.getItem('token'));
+    const [isLoggedIn, setIsLoggedIn] = useState<boolean>(!!localStorage.getItem('token')); // token이 존재하면 true, 아니면 false
 
     const login = async (username: string, password: string) => {
         try {

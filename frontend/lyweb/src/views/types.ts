@@ -16,5 +16,4 @@ export interface UserData {
     email?: string;
     birthdate?: number;
     phone?: number;
-    // 기타 다른 데이터 타입들...
 }

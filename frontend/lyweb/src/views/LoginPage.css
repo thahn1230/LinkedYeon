@@ -38,3 +38,35 @@
     background-color: #0056b3;
   }
   
+
+  .signup-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #FF7F00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+
+  .find-id-pw-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #FF7F00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+
+  .signup-button:hover {
+    background-color: #ff800073;
+  }
+
+  .find-id-pw-button:hover {
+    background-color: #ff800073;
+  }

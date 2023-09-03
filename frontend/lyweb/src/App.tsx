@@ -2,6 +2,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './function/AuthContext'; 
+import './App.css';
 import Header from './components/Header';
 import MainPage from './views/MainPage';
 import LoginPage from './views/LoginPage';
@@ -10,7 +11,7 @@ import FindIdPwPage from './views/FindIdPwPage';
 import MyPage from './views/MyPage';
 import NoticePage from './views/Notice/NoticePage';
 import Footer from './components/Footer';
-import PrivateRoute from './function/PrivateRoute';  // PrivateRoute의 경로를 제대로 입력해주세요.
+import PrivateRoute from './function/PrivateRoute';  // 로그인 여부에 따른 페이지 
 
 const App: React.FC = () => {
   return (
